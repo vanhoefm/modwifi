@@ -95,16 +95,32 @@ This is an advanced attack and not for the fainthearted. It clones an existing A
 modwifi@ubuntu:~/modwifi/tools$ sudo ./channelmitm -a wlan4 -c wlan5 -j wlan3 -s testnetwork -d mitm.pcap --dual
 ```
 
+## Troubleshooting
+
+If an attack or device is not working, you can try the following steps to get it working again:
+
+1. Change the channel of the device. This will reset the wireless chip in the dongle, and perhaps fix the issue.
+2. Bring the device up and down using `ifconfig` or `ip link`. This should reset even more settings than just changing the channel.
+3. Unplug the device and plug it back it. This reloads the complete firmware.
+4. If all else fails, reboot the device.
+
+If you can reproduce a bug, you free to file a bug report.
+
+Another few remarks when using our tools, and doing wireless hacking in general:
+
+- You can only change the channel of a monitor device when no other (virtual) interface is active. So if you have a `monX` interface, you need to bring down (`ifconfig wlanX down`) all other interface (which use that device) first.
+- In general you want to kill other processes that are trying to use/configure your WiFi device. Tools like [`airmon-zc`](http://svn.aircrack-ng.org/tags/1.2-beta3/manpages/airmon-zc.8) can help detect which processes might be interfering. Note that `airmon-zc` is the successor of the older `airmon-ng` tool.
+
 ## Installation
 
-You can also install the latest drivers and firmware on your own machine. The quickest method is to grab [one of our release packages](https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-15012015.tar.gz). Only your wireless driver for the devices mentioned above will be replaced, everything else stays the same. Normal usage of WiFi still works perfectly when these drivers are installed (I use these drivers myself :).
+You can also install the latest drivers and firmware on your own machine. The quickest method is to grab [one of our release packages](https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-20150118.tar.gz). Only your wireless driver for the devices mentioned above will be replaced, everything else stays the same. Normal usage of WiFi still works perfectly when these drivers are installed (I use these drivers myself :).
 
 The installation instructions are:
 
 ```bash
 mkdir modwifi && cd modwifi
-wget https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-15012015.tar.gz
-tar -xf modwifi-15012015.tar.gz
+wget https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-20150118.tar.gz
+tar -xf modwifi-20150118.tar.gz
 
 cd drivers && make defconfig-ath9k-debug
 make
