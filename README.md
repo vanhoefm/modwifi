@@ -8,7 +8,22 @@ We provide tools to perform low-layer attacks such as reactive and constant jamm
 
 This work was the result of the paper [Advanced Wi-Fi Attacks Using Commodity Hardware](https://lirias.kuleuven.be/bitstream/123456789/473761/1/acsac2014.pdf) presented at ACSAC 2014. *If you use these tools in your research, please reference this paper.* Most code is open source, and contributions are welcome. The code of the constant jammer can be requested but is not available publicly. Don't worry, we won't bite.
 
-## Quick start
+## Table of Contents
+
+* [Quick Start](#quick-start)
+* [Basic Usage](#basic-usage)
+    * [Reactive Jamming](#reactive-jamming)
+    * [Disabling Carrier Sense](#disabling-carrier-sense)
+    * [Constant Jamming](#constant-jamming)
+    * [Unfair Channel Usage](#unfair-channel-usage)
+    * [Forcing Corrupt Packets](#forcing-corrupt-packets)
+    * [Channel MitM and TKIP Broadcast Attack](#channel-mitm-and-tkip-broadcast-attack)
+* [Troubleshooting](#troubleshooting)
+* [Installation](#installation)
+* [Raspberry Pi Support](#raspberry-pi-support)
+* [Source Code](#source-code)
+
+## Quick Start
 
 You can [download a VMWare image](http://people.cs.kuleuven.be/~mathy.vanhoef/modwifi/Xubuntu-Modwifi.7z) that has the drivers, firmware, and user-land tools preinstalled. Just boot it, plug-in the USB dongle, and start experimenting! **The password of the account modwifi is modwifi**. Once booted, you can execute (the public) attacks below.
 
@@ -87,7 +102,7 @@ root@ubuntu:~$ cd /sys/kernel/debug/ieee80211/phy*/ath9k_htc/registers/
 root@ubuntu:~$ echo 1 > diag_corrupt_fcs
 ```
 
-#### TKIP Broadcast Attack
+#### Channel MitM and TKIP Broadcast Attack
 
 This is an advanced attack and not for the fainthearted. It clones an existing Access Point on a different channel. This allows us to reliably manipulate encrypted traffic. We used this to break TKIP. See [our paper]() for details. An example on how we used it to verify that our awesome-sauce attacks work:
 
@@ -136,7 +151,7 @@ cd tools && make all
 
 If you want to compile the firmware as well, clone the [ath9k-htc repository](https://github.com/vanhoefm/modwifi-ath9k-htc), and follow the instructions there. If you want to modify the driver, you can use the downloaded code in `drivers.tar.xz`. I recommend putting that code in our own repository to keep track of changes. But even better would be to apply patches to the latest Linux kernel, and then either compiling the kernel or using [backports](https://backports.wiki.kernel.org/index.php/Main_Page) to create a release similar to mine. Still, the truly best option would be to contribute patches to this project (git pull request or just mail your patches)!
 
-## Raspberry Pi
+## Raspberry Pi Support
 
 Our drivers and firmware can be run on a Raspberry Pi. We tested this using raspbian. In order to get it working first download and update some dependencies:
 
@@ -154,7 +169,7 @@ And to assure our raspberry pi will recognize the device when we plug it in, exe
 
 	echo "ath9k_htc" | sudo tee -a /etc/modules
 
-Everything is now ready to install our drivers and firmware. Just **follow the instructions under section "Installation"**. Compilations of the drivers can take a few minutes. Finally we have to prevent raspbian from automatically trying to enable and manage WiFi (this interferes with our attacks). First edit `/etc/network/interfaces` and comment out the following two lines:
+Everything is now ready to install our drivers and firmware. Just **follow the instructions under section "Installation"**. Compilation of the drivers can take a while. Finally we have to prevent raspbian from automatically trying to enable and manage WiFi (this interferes with our attacks). First edit `/etc/network/interfaces` and comment out the following two lines:
 
 	#allow-hotplug wlan0
 	#iface wlan0 inet manual
