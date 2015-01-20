@@ -128,7 +128,7 @@ Another few remarks when using our tools, and doing wireless hacking in general:
 
 ## Installation
 
-You can also install the latest drivers and firmware on your own machine. The quickest method is to grab [one of our release packages](https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-20150118.tar.gz). Only your wireless driver for the devices mentioned above will be replaced, everything else stays the same. Normal usage of WiFi still works perfectly when these drivers are installed (I use these drivers myself :).
+You can also install the latest drivers and firmware on your own machine. The quickest method is to grab [one of our release packages](https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-20150118.tar.gz). Only your wireless stack and drivers will be replaced, all other drivers will remain the same (if you use other wifi devices as well, compile them too). Normal usage of WiFi still works perfectly when these drivers are installed (I use these drivers myself :).
 
 The installation instructions are:
 
