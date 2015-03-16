@@ -185,7 +185,7 @@ This will prevent raspbian from automatically enabling and managing the wireless
 
 ## Source Code
 
-The work is divided other several git repositories:
+The work is divided over several git repositories:
 
 1. **Linux:** [Forked Linux kernel](https://github.com/vanhoefm/modwifi-linux) to make driver modifications.
 2. **Backports:** [Fork of the backports](https://github.com/vanhoefm/modwifi-backports) projects so we can backport our drivers to older kernels.
