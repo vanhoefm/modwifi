@@ -19,9 +19,9 @@ This work was the result of the paper [Advanced Wi-Fi Attacks Using Commodity Ha
     * [Forcing Corrupt Packets](#forcing-corrupt-packets)
     * [Channel MitM and TKIP Broadcast Attack](#channel-mitm-and-tkip-broadcast-attack)
 * [Troubleshooting](#troubleshooting)
-* [Installation](#installation)
+* [Installation and Source Code](#installation-and-source-code)
 * [Raspberry Pi Support](#raspberry-pi-support)
-* [Source Code](#source-code)
+* [Repositories](#repositories)
 
 ## Quick Start
 
@@ -126,7 +126,7 @@ Another few remarks when using our tools, and doing wireless hacking in general:
 - You can only change the channel of a monitor device when no other (virtual) interface is active. So if you have a `monX` interface, you need to bring down (`ifconfig wlanX down`) all other interface (which use that device) first.
 - In general you want to kill other processes that are trying to use/configure your WiFi device. Tools like [`airmon-zc`](http://svn.aircrack-ng.org/tags/1.2-beta3/manpages/airmon-zc.8) can help detect which processes might be interfering. Note that `airmon-zc` is the successor of the older `airmon-ng` tool.
 
-## Installation
+## Installation and Source Code
 
 You can also install the latest drivers and firmware on your own machine. The quickest method is to grab [one of our release packages](https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-20150118.tar.gz). Only your wireless stack and drivers will be replaced, all other drivers will remain the same (if you use other wifi devices as well, compile them too). Normal usage of WiFi still works perfectly when these drivers are installed (I use these drivers myself :).
 
@@ -183,7 +183,7 @@ Now edit `/etc/default/ifplugd` and change the `INTERFACES` and `HOTPLUG_INTERFA
 
 This will prevent raspbian from automatically enabling and managing the wireless interface (so we can first put the device in monitor mode and only then enable it). You can now compile the tools and execute the attacks!
 
-## Source Code
+## Repositories
 
 The work is divided over several git repositories:
 
