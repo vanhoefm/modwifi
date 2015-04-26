@@ -149,7 +149,7 @@ cd tools && make all
 
 **Reboot** so our new drivers will be used. After that you should be good to go. That is, plug in your dongle, and execute the compiled tools.
 
-If you want to compile the firmware as well, clone the [ath9k-htc repository](https://github.com/vanhoefm/modwifi-ath9k-htc), and follow the instructions there. If you want to modify the driver, you can use the downloaded code in `drivers.tar.xz`. I recommend putting that code in our own repository to keep track of changes. But even better would be to apply patches to the latest Linux kernel, and then either compiling the kernel or using [backports](https://backports.wiki.kernel.org/index.php/Main_Page) to create a release similar to mine. Still, the truly best option would be to contribute patches to this project (git pull request or just mail your patches)!
+If you want to compile the firmware as well, clone the [ath9k-htc repository](https://github.com/vanhoefm/modwifi-ath9k-htc), and follow the instructions there. If you want to modify the driver, you can modify the downloaded code in `modwifi-YYYYMMDD.tar.gz`. You can put that code in our own repository to keep track of changes. But better would be to clone the research branch of [our forked Linux kernel](https://github.com/vanhoefm/modwifi-linux). The driver can be extracted from the kernel code using the [backports](https://backports.wiki.kernel.org/index.php/Main_Page) project. You can then install the drivers only (so without modifying your own kernel).
 
 ## Raspberry Pi Support
 
