@@ -136,8 +136,8 @@ The installation instructions are:
 
 ```bash
 mkdir modwifi && cd modwifi
-wget https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-20150118.tar.gz
-tar -xf modwifi-20150118.tar.gz
+wget https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-4.2-1.tar.gz
+tar -xf modwifi-4.2-1.tar.gz
 
 cd drivers && make defconfig-ath9k-debug
 make
