@@ -8,7 +8,7 @@ We provide tools to perform low-layer attacks such as reactive and constant jamm
 
 This work was the result of the paper [Advanced Wi-Fi Attacks Using Commodity Hardware](https://lirias.kuleuven.be/bitstream/123456789/473761/1/acsac2014.pdf) presented at ACSAC 2014. *If you use these tools in your research, please reference this paper.* Most code is open source, and contributions are welcome. The code of the constant jammer can be requested but is not available publicly. Don't worry, we won't bite.
 
-Latest update: we now support Linux kernel 4.2! See the [modwifi-4.2-1.tar.gz](releases/modwifi-4.2-1.tar.gz) release!
+April 2016: we now support Linux kernel 4.4! See the [modwifi-4.4-1.tar.gz](releases/modwifi-4.4-1.tar.gz) release! This has been tested on Arch Linux and Ubuntu 15.10.
 
 ## Table of Contents
 
@@ -133,14 +133,14 @@ Another few remarks when using our tools, and doing wireless hacking in general:
 
 ## Installation and Source Code
 
-You can also install the latest drivers and firmware on your own machine. The quickest method is to grab [one of our release packages](https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-20150118.tar.gz). Only your wireless stack and drivers will be replaced, all other drivers will remain the same (if you use other wifi devices as well, compile them too). Normal usage of WiFi still works perfectly when these drivers are installed (I use these drivers myself :).
+You can also install the latest drivers and firmware on your own machine. The quickest method is to grab [one of our release packages](https://github.com/vanhoefm/modwifi/raw/master/releases/). Only your wireless stack and drivers will be replaced, all other drivers will remain the same (if you use other wifi devices as well, compile them too). Normal usage of WiFi still works perfectly when these drivers are installed (I use these drivers myself :).
 
 The installation instructions are:
 
 ```bash
 mkdir modwifi && cd modwifi
-wget https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-4.2-1.tar.gz
-tar -xf modwifi-4.2-1.tar.gz
+wget https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-4.4-1.tar.gz
+tar -xf modwifi-4.4-1.tar.gz
 
 cd drivers && make defconfig-ath9k-debug
 make
@@ -160,7 +160,7 @@ cd tools && make all
 
 Note that this only compiles and installs the ath9k drivers. If you want to use modwifi, and at the same time control other wireless networks cards on the kernel, modify and use the appropriate `defconfig-*` file (e.g. include the appropriate flags in `defconfig-ath9k-debug` so the drivers you need are also compiled).
 
-If you want to compile the firmware as well, clone the [ath9k-htc repository](https://github.com/vanhoefm/modwifi-ath9k-htc), and follow the instructions there. If you want to modify the driver, you can modify the downloaded code in `modwifi-YYYYMMDD.tar.gz`. You can put that code in our own repository to keep track of changes. But better would be to clone the research branch of [our forked Linux kernel](https://github.com/vanhoefm/modwifi-linux). The driver can be extracted from the kernel code using the [backports](https://backports.wiki.kernel.org/index.php/Main_Page) project. You can then install the drivers only (so without modifying your own kernel).
+If you want to compile the firmware as well, clone the [ath9k-htc repository](https://github.com/vanhoefm/modwifi-ath9k-htc), and follow the instructions there. If you want to modify the driver, you can modify the downloaded code in `modwifi-YYYYMMDD.tar.gz`. You can put that code in your own repository to keep track of changes, and send us patches based on this. Alternatively, the more correct but also significantly more tedious method, would be to clone the research branch of [our forked Linux kernel](https://github.com/vanhoefm/modwifi-linux). The driver can be extracted from the kernel code using the [backports](https://backports.wiki.kernel.org/index.php/Main_Page) project. You can then install the drivers only (so without modifying your own kernel).
 
 ## Raspberry Pi Support
 
