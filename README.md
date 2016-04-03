@@ -50,10 +50,13 @@ Our current implementation of our reactive jammer allows you to block an Access 
 modwifi@ubuntu:~/modwifi/tools$ sudo rfkill unblock wifi
 modwifi@ubuntu:~/modwifi/tools$ sudo iw wlan0 set type monitor
 modwifi@ubuntu:~/modwifi/tools$ sudo ifconfig wlan0 up
+modwifi@ubuntu:~/modwifi/tools$ sudo iw wlan0 set channel 11
 modwifi@ubuntu:~/modwifi/tools$ sudo ./reactivejam -i wlan0 -s "Home Network"
 ```
 
-**The first three commands need to be executed only once** after plugging in your dongle. You can stop the reactive jammer using CTRL+C. It may take a few seconds before it actually stops. By modifying the firmware you can reactive jam any kind of packets you like. For example, you could jam all packets of a specific client. Note that only medium to large packets can be reliably jammed (see our paper).
+**The first three commands need to be executed only once** after plugging in your dongle. To get the interface name of the wireless card you can execute `iwconfig`. In this case our targeted AP was on channel 11, but remember that your targeted AP may be on a different channel.
+
+You can stop the reactive jammer using CTRL+C. It may take a few seconds before it actually stops. By modifying the firmware you can reactive jam any kind of packets you like. For example, you could jam all packets of a specific client. Note that only medium to large packets can be reliably jammed (see our paper).
 
 You can verify that this works by monitoring the channel with a second device. Make sure that this device also reports corrupted frames using:
 
@@ -144,8 +147,11 @@ make
 sudo make install
 cd ..
 
-for FILE in /lib/firmware/htc*; do sudo cp $FILE ${FILE}_backup; done
-sudo cp target_firmware/htc* /lib/firmware/
+# Note: the location and name of firmware files on your machine may be different
+compgen -G /lib/firmware/ath9k_htc/*backup || for FILE in /lib/firmware/ath9k_htc/*; do sudo cp $FILE ${FILE}_backup; done
+sudo cp target_firmware/htc_7010.fw /lib/firmware/ath9k_htc/htc_7010-1.4.0.fw
+sudo cp target_firmware/htc_9271.fw /lib/firmware/ath9k_htc/htc_9271-1.4.0.fw
+
 sudo apt-get install g++ libssl-dev libnl-3-dev libnl-genl-3-dev
 cd tools && make all
 ```
