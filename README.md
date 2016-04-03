@@ -8,7 +8,7 @@ We provide tools to perform low-layer attacks such as reactive and constant jamm
 
 This work was the result of the paper [Advanced Wi-Fi Attacks Using Commodity Hardware](https://lirias.kuleuven.be/bitstream/123456789/473761/1/acsac2014.pdf) presented at ACSAC 2014. *If you use these tools in your research, please reference this paper.* Most code is open source, and contributions are welcome. The code of the constant jammer can be requested but is not available publicly. Don't worry, we won't bite.
 
-April 2016: we now support Linux kernel 4.4! See the [modwifi-4.4-1.tar.gz](releases/modwifi-4.4-1.tar.gz) release! This has been tested on Arch Linux and Ubuntu 15.10.
+April 2016: we now support Linux kernels 3.0 up to and including 4.4! See the [modwifi-4.4-1.tar.gz](releases/modwifi-4.4-1.tar.gz) release! This has been tested on Arch Linux and Ubuntu 15.10.
 
 ## Table of Contents
 
@@ -122,13 +122,13 @@ If an attack or device is not working, you can try the following steps to get it
 1. Change the channel of the device. This will reset the wireless chip in the dongle, and perhaps fix the issue.
 2. Bring the device up and down using `ifconfig` or `ip link`. This should reset even more settings than just changing the channel.
 3. Unplug the device and plug it back it. This reloads the complete firmware.
-4. If all else fails, reboot the device.
+4. If all else fails, reboot your computer.
 
-If you can reproduce a bug, you free to file a bug report.
+If you can reproduce a bug, feel free to file a bug report.
 
 Another few remarks when using our tools, and doing wireless hacking in general:
 
-- You can only change the channel of a monitor device when no other (virtual) interface is active. So if you have a `monX` interface, you need to bring down (`ifconfig wlanX down`) all other interface (which use that device) first.
+- You can only change the channel of a monitor device when no other (virtual) interface is active. So if you have a `monX` interface, you need to bring down (`ifconfig wlanX down`) all other interfaces (which use that device) first.
 - In general you want to kill other processes that are trying to use/configure your WiFi device. Tools like [`airmon-zc`](http://svn.aircrack-ng.org/tags/1.2-beta3/manpages/airmon-zc.8) can help detect which processes might be interfering. Note that `airmon-zc` is the successor of the older `airmon-ng` tool.
 
 ## Installation and Source Code
