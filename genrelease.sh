@@ -6,7 +6,7 @@ echo -e "Make sure all projects are on the correct branch...\n"
 # Let at modules generate their result in a tar
 cd ../ath9k-htc/ && ./build.sh release && cd -
 cd ../backports/ && ./release.sh       && cd -
-cd ../tools/     && make release       && cd -
+cd ../tools/     && ./release.sh       && cd -
 
 # Combine and zip all results
 cp ../drivers.tar modwifi.tar
