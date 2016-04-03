@@ -146,7 +146,7 @@ cd ..
 
 for FILE in /lib/firmware/htc*; do sudo cp $FILE ${FILE}_backup; done
 sudo cp target_firmware/htc* /lib/firmware/
-sudo apt-get install g++ libnl-dev libssl-dev
+sudo apt-get install g++ libssl-dev libnl-3-dev libnl-genl-3-dev
 cd tools && make all
 ```
 
