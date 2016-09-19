@@ -24,6 +24,7 @@ April 2016: we now support Linux kernels 3.0 up to and including 4.4! See the [m
 * [Installation and Source Code](#installation-and-source-code)
 * [Raspberry Pi Support](#raspberry-pi-support)
 * [Repositories](#repositories)
+* [Supporting new kernels](#supporting-new-kernels)
 
 ## Quick Start
 
@@ -215,3 +216,17 @@ To compile the Linux and ath9k-htc firmware, read the documentation of these pro
 For those who also want to start hacking away at the driver and firmware, I recommend first reviewing our patches. This allows you to study what our changes do, and inspect the firmware code at small chunks one at a time. That way it's easier to learn step by step. Maybe you will even find bugs or can make improvements (let us know). Also, in the `ath9k-htc` repository, there is a directory called `docs`. While still terse to read, these documents should be an excellent guide while reading and understanding the code.
 
 If you have any questions, don't hesitate to send us a mail.
+
+## Supporting new kernels
+
+We rely on the [driver backports project](https://backports.wiki.kernel.org/index.php/Main_Page) to ship our modified drivers (as installable modules) to older kernels. This provides two advantages: (1) the drivers can be installed as modules, meaning user don't have to (re)compile a linux kernel; and (2) these drivers (i.e., modules) are compatible with many recent kernel versions. Officially the [backports project tracks the linux-next tree](https://backports.wiki.kernel.org/index.php/Documentation/backports/hacking#Git_trees_you_will_need). This means it extracts, and backports, recents drivers (as loadable modules) from the linux-next tree. However, we base our code on [Linus' tree](http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git), because [basing code on linux-next is not really possible](https://lwn.net/Articles/289013/).
+
+To target a new kernel there are two cases:
+
+1. There is a `linux-x.y.z` branch of the kernel you want to target. Checkout this branch, use it to extract modified drivers. Should be relatively simple.
+2. We need to create our own `linux-x.y.z` branch. I call my own batches of this type `mathy-x.y.z`. It is best to first get backports working against a linux-next tag that was tested by the backports project itself. Then I found that, with some minor patches, backports will also work against Linus' tree of a specific version tag that is close to the tested linux-next snapshot. So find the latest linux-next snapshot that is compatible with the backports project. [How to get linux-next](https://www.kernel.org/doc/man-pages/linux-next.html). You may need to use [linux-next-history](http://git.kernel.org/cgit/linux/kernel/git/next/linux-next-history.git) for this, which [contains all linux-next tags](http://lkml.iu.edu/hypermail/linux/kernel/1108.0/00555.html) ever created. It may be that backports cannot cleanly extract the driver code. If so, crease a new research branch in the backports repository, and modify the patches so everything cleanly applies and compiles.
+
+**Use python2 when using backports**. Some scripts may fail if python3 is the default.
+
+Note that branches named `mathy-x.y.z` are custom branches, I personally use them to create backports for my _currently running_ linux kernel. For example, `mathy-4.7.y` can take code from linux-next, and will compile on Linux 4.7.4. However, it may not compile on older kernels! While working on backports, you may find it useful to use `rediff` from the `patchutils` package to manually change patch files.
+
