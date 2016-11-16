@@ -154,8 +154,8 @@ compgen -G /lib/firmware/ath9k_htc/*backup || for FILE in /lib/firmware/ath9k_ht
 sudo cp target_firmware/htc_7010.fw /lib/firmware/ath9k_htc/htc_7010-1.4.0.fw
 sudo cp target_firmware/htc_9271.fw /lib/firmware/ath9k_htc/htc_9271-1.4.0.fw
 
-sudo apt-get install g++ libssl-dev libnl-3-dev libnl-genl-3-dev
-cd tools && make all
+sudo apt-get install g++ libssl-dev libnl-3-dev libnl-genl-3-dev cmake
+cd tools && cmake CMakeLists.txt && make all
 ```
 
 **Reboot** so our new drivers will be used. After that you should be good to go. That is, plug in your dongle, and execute the compiled tools.
