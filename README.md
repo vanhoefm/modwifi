@@ -4,7 +4,8 @@ We provide tools to perform low-layer attacks such as reactive and constant jamm
 
 * [AWUS036NHA](http://www.amazon.com/dp/B004Y6MIXS?tag=modwiffir-20)
 * [WNDA3200](http://www.amazon.co.uk/dp/B009XSPZ0U?tag=modwiffir-20)
-* [TP-Link WN722N v1](https://wikidevi.com/wiki/TP-LINK_TL-WN722N) (The newer v2 version is not compatible with ModWifi because it no longer uses an Atheros chip. Be sure to buy the v1 version.)
+* [Azurewave AW-NU138](https://wikidevi.com/wiki/AzureWave_AW-NU138). Confirmed to work by a user. It's a mini size type without external connector.
+* [TP-Link WN722N v1](https://wikidevi.com/wiki/TP-LINK_TL-WN722N). Note that the newer v2 version is not compatible with ModWifi because it no longer uses an Atheros chip. Be sure to buy the v1 version.
 
 This work was the result of the paper [Advanced Wi-Fi Attacks Using Commodity Hardware](https://lirias.kuleuven.be/bitstream/123456789/473761/1/acsac2014.pdf) presented at ACSAC 2014. *If you use these tools in your research, please reference this paper.* Most code is open source, and contributions are welcome. The code of the constant jammer can be requested but is not available publicly. Don't worry, we won't bite.
 
