@@ -145,6 +145,7 @@ mkdir modwifi && cd modwifi
 wget https://github.com/vanhoefm/modwifi/raw/master/releases/modwifi-4.4-1.tar.gz
 tar -xf modwifi-4.4-1.tar.gz
 
+apt-get install build-essential libncurses-dev bison flex libssl-dev
 cd drivers && make defconfig-ath9k-debug
 make
 sudo make install
