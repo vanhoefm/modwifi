@@ -10,7 +10,7 @@ We provide tools to perform low-layer attacks such as reactive and constant jamm
 This work was the result of the paper [Advanced Wi-Fi Attacks Using Commodity Hardware](https://lirias.kuleuven.be/bitstream/123456789/473761/1/acsac2014.pdf) presented at ACSAC 2014. *If you use these tools in your research, please reference this paper.* Most code is open source, and contributions are welcome. The code of the constant jammer can be requested but is not available publicly. Don't worry, we won't bite.
 
 - April 2016: we now support Linux kernels 3.0 up to and including 4.4! See the [modwifi-4.4-1.tar.gz](releases/modwifi-4.4-1.tar.gz) release! This has been tested on Arch Linux and Ubuntu 15.10.
-- September 2016: we have an experimental release for Linux kernel 4.7. See the [modwifi-4.7.4-experimental-1.tar.gz](releases/modwifi-4.7.4-experimental-1.tar.gz) release. This has been tested on Arch Linux, with as running kernel `4.7.4-1-ARCH`.
+- September 2019: we have a release that **supports kernels 5.3 and below**. See the [modwifi-5.3-rc4-1.tar.gz](releases/modwifi-5.3-rc4-1.tar.gz) release. This was tested on kernel 4.9.0-9 and 5.2.9.
 
 ## Table of Contents
 
