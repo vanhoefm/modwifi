@@ -23,6 +23,7 @@ This work was the result of the paper [Advanced Wi-Fi Attacks Using Commodity Ha
     * [Unfair Channel Usage](#unfair-channel-usage)
     * [Forcing Corrupt Packets](#forcing-corrupt-packets)
     * [Channel MitM and TKIP Broadcast Attack](#channel-mitm-and-tkip-broadcast-attack)
+    * [A-MPDU Injection](#a-mpdu-injection)
 * [Troubleshooting](#troubleshooting)
 * [Installation and Source Code](#installation-and-source-code)
 * [Raspberry Pi Support](#raspberry-pi-support)
@@ -118,6 +119,16 @@ This is an advanced attack and not for the fainthearted. It clones an existing A
 ```bash
 modwifi@ubuntu:~/modwifi/tools$ sudo ./channelmitm -a wlan4 -c wlan5 -j wlan3 -s testnetwork -d mitm.pcap --dual
 ```
+
+#### A-MPDU Injection
+
+You can inject A-MPDUs using ModWifi by adding a special trailer to injected frames. This trailer data will be removed before transmitting the frame to the air. All frames in an A-MPDU except the last must be appended with the trialer b"\x00AGGR". The last frame to be part of the A-MPDU must be appended with the trailer b"\xFFAGGR". For example, to inject an A-MPDU that aggregates three frames in scapy, you should use:
+
+	sendp(RadioTap()/Dot11()/Raw(b"\x00AGGR"))
+	sendp(RadioTap()/Dot11()/Raw(b"\x00AGGR"))
+	sendp(RadioTap()/Dot11()/Raw(b"\xFFAGGR"))
+
+The firmware will then automatically aggregate these three frames into an A-MPDU. For background, see the function [`modwifi_txampdu_check`](https://github.com/vanhoefm/modwifi-ath9k-htc/blob/research/target_firmware/wlan/if_owl.c#L1573).
 
 ## Troubleshooting
 
