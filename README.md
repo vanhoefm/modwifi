@@ -3,7 +3,8 @@
 We provide tools to perform low-layer attacks such as reactive and constant jamming using commodity devices. Reactive jamming allows you to block specific Wi-Fi packets. For example, all beacons and probe responses of a specific Access Point (AP) can be jammed. It has been tested with the following devices:
 
 * [AWUS036NHA](http://www.amazon.com/dp/B004Y6MIXS?tag=modwiffir-20)
-* [WNDA3200](http://www.amazon.co.uk/dp/B009XSPZ0U?tag=modwiffir-20)
+* [Technoethical N150 HGA](https://tehnoetic.com/adapters/tet-n150hga)
+* [WNDA3200](https://www.amazon.co.uk/gp/offer-listing/B007OWR9XI?tag=modwiffir-20)
 * [Azurewave AW-NU138](https://wikidevi.com/wiki/AzureWave_AW-NU138). Confirmed to work by a user. It's a mini size type without external connector.
 * [TP-Link WN722N v1](https://wikidevi.com/wiki/TP-LINK_TL-WN722N). Note that the newer v2 version is not compatible with ModWifi because it no longer uses an Atheros chip. Be sure to buy the v1 version.
 
