@@ -29,6 +29,7 @@ This work was the result of the paper [Advanced Wi-Fi Attacks Using Commodity Ha
 * [Raspberry Pi Support](#raspberry-pi-support)
 * [Repositories](#repositories)
 * [Supporting new kernels](#supporting-new-kernels)
+* [Publications and Systems Using ModWifi](#publications-and-systems-using-modwifi)
 
 ## Quick Start
 
@@ -245,3 +246,23 @@ To target a new kernel there are two cases:
 
 Note that branches named `mathy-x.y.z` are custom branches, I personally use them to create backports for my _currently running_ linux kernel. For example, `mathy-4.7.y` can take code from linux-next, and will compile on Linux 4.7.4. However, it may not compile on older kernels! While working on backports, you may find it useful to use `rediff` from the `patchutils` package to manually change patch files.
 
+## Publications and Systems Using ModWifi
+
+Below you can find a list papers and systems that either use or build upon ModWifi. They are listed in chronological order.
+
+If you have used or extended ModWifi and would like to have your paper listed here, please open a pull request at https://github.com/vanhoefm/modwifi/pulls or send an email to mathy.vanhoef@kuleuven.be.
+
+* [TCCI: Taming Co-Channel Interference for Wireless LANs](http://ece.louisville.edu/hzeng/papers/Adnan20_TCCI.pdf) by Adnan Quadri, Hossein Pirayesh, Pedram Kheirkhah Sangdeh, and Huacheng Zeng. Published at ACM MobiHoc, 2020.
+* [Timeless Timing Attacks: Exploiting Concurrency to Leak Secrets over Remote Connections](https://www.usenix.org/conference/usenixsecurity20/presentation/van-goethem) by Tom Van Goethem, Christina Pöpper, Wouter Joosen, and Mathy Vanhoef. Published at USENIX Security, 2020.
+* [Protecting Wi-Fi Beacons From Outsider Forgeries](https://papers.mathyvanhoef.com/wisec2020.pdf) by Mathy Vanhoef, Prasant Adhikari, and Christina Pöpper. Published at WiSec, 2020.
+* [Poster Abstract: Jamming WLAN Data Frames and Acknowledgments using Commodity Hardware](https://ieeexplore.ieee.org/document/8845228) by Florian Klingler and Falko Dressler. Published at IEEE INFOCOM, 2019.
+* [BeaconRider: Opportunistic Sharing of Beacon Air-Time in Densely Deployed WLANs](https://ieeexplore.ieee.org/document/8888044) by Hyunjoong Lee, Jungjun Kim, Changhee Joo, and Saewoong Bahk. Published in the IEEE 27th International Conference on Network Protocols (ICNP), 2019.
+* [Multi-channel Man-in-the-Middle Attack Against Communication-Based Train Control Systems: Attack Implementation and Impact](https://link.springer.com/chapter/10.1007/978-981-15-2914-6_14) by Mengchao Chi, Bing Bu, Hongwei Wang, Yisheng Lv, Shengwei Yi, Xuetao Yang, and Jie Li. Published in the 4th International Conference on Electrical and Information Technologies for Rail Transportation (EITRT), 2019.
+* [JamCloak: Reactive Jamming Attack over Cross-Technology Communication Links](https://ieeexplore.ieee.org/document/8526802) by Gonglong Chen and Wei Dong. Published at the  IEEE 26th International Conference on Network Protocols, 2018.
+* [The Impact of Head of Line Blocking in Highly Dynamic WLANs](https://ieeexplore.ieee.org/document/8360078) by Florian Klingler, Falko Dressler, and Christoph Sommer. Published in IEEE Transactions on Vehicular Technology, 2018.
+* [Measurement on Beacon Reception Ratio under Jamming Attack in IEEE 802.11 Wireless Networks](https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE07512399) by Jeongjun Kim, Hyunjoong Lee, Myung-Seop Lee, and Sewoong Park. Pubshid in Journal of the Korean Institute of Communication Sciences, 2018.
+* [A Systematic Study on the Impact of Noise and OFDM Interference on IEEE 802.11p](https://ieeexplore.ieee.org/document/8275633) by Bastian Bloessl, Florian Klingler, Fabian Missbrenner, and Christoph Sommer. Published at the IEEE Vehicular Networking Conference (VNC), 2017.
+* [Evolutionary Game Theory Perspective on Dynamic Spectrum Access Etiquette](https://ieeexplore.ieee.org/document/8014421) by Mohammad Abu Shattal, Anna Wisniewska, Ala Al-Fuqaha, Bilal Khan, and Kirk Dombrowski. Published in IEEE Access, 2017.
+* [Key reinstallation attacks: Forcing nonce reuse in WPA2](https://papers.mathyvanhoef.com/ccs2017.pdf) by Mathy Vanhoef and Frank Piessens. Published at CCS, 2017.
+* [P-TDMA-SYS: A TDMA System over Commodity 802.11 Hardware for Mobile Ad-Hoc Networks](http://www.jocm.us/uploadfile/2016/0826/20160826041445652.pdf) by Zechen Lin, Zhizhong Ding, Qingxin Hu, and Shuai Tao. Published in Journal of Communications, 2016.
+* [Request and conquer: Exposing cross-origin resource size](https://www.usenix.org/conference/usenixsecurity16/technical-sessions/presentation/goethem) by Tom Van Goethem, Mathy Vanhoef, Frank Piessens, and Wouter Joosen. Published at USENIX Security, 2016.
