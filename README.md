@@ -115,6 +115,8 @@ root@ubuntu:~$ echo 1 > diag_corrupt_fcs
 
 #### Channel MitM and TKIP Broadcast Attack
 
+**Update:** if you want to prototype multi-channel MitM attacks, consider using the [Python implementation](https://github.com/vanhoefm/mc-mitm) instead. It is based on Python/Scapy and easier to modify, at the cost of being slower when processing a lot of data.
+
 This is an advanced attack and not for the fainthearted. It clones an existing Access Point on a different channel. This allows us to reliably manipulate encrypted traffic. We used this to break TKIP. See [our paper]() for details. An example on how we used it to verify that our awesome-sauce attacks work:
 
 ```bash
