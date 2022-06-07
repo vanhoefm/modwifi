@@ -153,6 +153,12 @@ Another few remarks when using our tools, and doing wireless hacking in general:
 
 You can also install the latest drivers and firmware on your own machine. The quickest method is to grab [one of our release packages](https://github.com/vanhoefm/modwifi/raw/master/releases/). Only your wireless stack and drivers will be replaced, all other drivers will remain the same (if you use other wifi devices as well, compile them too). Normal usage of WiFi still works perfectly when these drivers are installed (I use these drivers myself :).
 
+### Ubuntu 15.10
+
+ModWiFi was originally tested on Ubuntu 15.10. You can download and install this older version of Ubuntu in a virtual machine as follows. First download [Ubuntu 15.10](http://old-releases.ubuntu.com/releases/15.10/) and install it in your VM. Then [update your sources.list](https://stackoverflow.com/questions/46572163/where-did-the-ubuntu-wily-sources-go) so that you can still install packages using apt. Note that these packages are no longer recieving updates. You can now download and install the modwifi-4.4-1.tar.gz package according to the general instructions below.
+
+### General Instructions
+
 The installation instructions are:
 
 ```bash
