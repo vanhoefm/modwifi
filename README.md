@@ -133,6 +133,16 @@ You can inject A-MPDUs using ModWifi by adding a special trailer to injected fra
 
 The firmware will then automatically aggregate these three frames into an A-MPDU. For background, see the function [`modwifi_txampdu_check`](https://github.com/vanhoefm/modwifi-ath9k-htc/blob/research/target_firmware/wlan/if_owl.c#L1573).
 
+#### Firmware Debugging
+
+There is support to add short debug messages to the firmware. You can access these debug messages as follows:
+
+	root@ubuntu:~$ mount -t debugfs none /sys/kernel/debug
+	root@ubuntu:~$ cd /sys/kernel/debug/ieee80211/phy*/ath9k_htc/
+	root@ubuntu:~$ cat dmesg
+
+In the firmware you can make calls to [printk](https://github.com/vanhoefm/modwifi-ath9k-htc/blob/f01cbd56f160bd3f593fb71324c424241ea604ad/target_firmware/wlan/attacks.c#L302) to debug the firmware. Because the firmware has a low amount of memory, it is recommended to only add short debug messages. The debug log is implemented as a ringbuffer on the firmware, meaning new debug messages will overwrite old messages to prevent running out of memory.
+
 ## Troubleshooting
 
 If an attack or device is not working, you can try the following steps to get it working again:
