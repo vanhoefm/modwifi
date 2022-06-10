@@ -24,6 +24,7 @@ This work was the result of the paper [Advanced Wi-Fi Attacks Using Commodity Ha
     * [Forcing Corrupt Packets](#forcing-corrupt-packets)
     * [Channel MitM and TKIP Broadcast Attack](#channel-mitm-and-tkip-broadcast-attack)
     * [A-MPDU Injection](#a-mpdu-injection)
+    * [Firmware Debugging](#firmware-debugging)
 * [Troubleshooting](#troubleshooting)
 * [Installation and Source Code](#installation-and-source-code)
 * [Raspberry Pi Support](#raspberry-pi-support)
