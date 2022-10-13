@@ -271,6 +271,11 @@ Below you can find a list papers and systems that either use or build upon ModWi
 
 If you have used or extended ModWifi and would like to have your paper listed here, please open a pull request at https://github.com/vanhoefm/modwifi/pulls or send an email to mathy.vanhoef@kuleuven.be.
 
+* [Delay Wreaks Havoc on Your Smart Home: Delay-based Automation Interference Attacks]() by Haotian Chi, Chenglong Fu, Qiang Zeng, and Xiaojiang Du. Published at IEEE Symposium on Security and Privacy (SP), 2022.
+* [A Signature-Based Wireless Intrusion Detection System Framework for Multi-Channel Man-in-the-Middle Attacks Against Protected Wi-Fi Networks](https://doi.org/10.36227/techrxiv.19773136.v1) by Manesh Thankappan, Helena Rifà-Pous, and Carles Garrigues.
+* [Multi-Channel Man-in-the-Middle attacks against protected Wi-Fi networks: A state of the art review](https://www.sciencedirect.com/science/article/pii/S0957417422015093) by Manesh Thankappan, Helena Rifà-Pous, and Carles Garrigues. Published at Expert Systems With Applications, 2022.
+* [Fragment and Forge: Breaking Wi-Fi Through Frame Aggregation and Fragmentation](https://papers.mathyvanhoef.com/usenix2021.pdf) by Mathy Vahoef. Published at USENIX Security, 2021.
+* [TTWiFi: Time-Triggered Communication over WiFi](https://dl.acm.org/doi/pdf/10.1145/3479243.3487298) by Carl Lusty, Vladimir Estivill-Castro, and René Hexel. Published at Design and Analysis of Intelligent Vehicular Networks and Applications, 2021.
 * [TCCI: Taming Co-Channel Interference for Wireless LANs](http://ece.louisville.edu/hzeng/papers/Adnan20_TCCI.pdf) by Adnan Quadri, Hossein Pirayesh, Pedram Kheirkhah Sangdeh, and Huacheng Zeng. Published at ACM MobiHoc, 2020.
 * [Timeless Timing Attacks: Exploiting Concurrency to Leak Secrets over Remote Connections](https://www.usenix.org/conference/usenixsecurity20/presentation/van-goethem) by Tom Van Goethem, Christina Pöpper, Wouter Joosen, and Mathy Vanhoef. Published at USENIX Security, 2020.
 * [Protecting Wi-Fi Beacons From Outsider Forgeries](https://papers.mathyvanhoef.com/wisec2020.pdf) by Mathy Vanhoef, Prasant Adhikari, and Christina Pöpper. Published at WiSec, 2020.
