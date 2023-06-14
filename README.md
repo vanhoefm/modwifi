@@ -34,7 +34,7 @@ This work was the result of the paper [Advanced Wi-Fi Attacks Using Commodity Ha
 
 ## Quick Start
 
-You can [download a VMWare image](http://people.cs.kuleuven.be/~mathy.vanhoef/modwifi/Xubuntu-Modwifi.7z) that has the drivers, firmware, and user-land tools preinstalled. Just boot it, plug-in the USB dongle, and start experimenting! **The password of the account modwifi is modwifi**. Once booted, you can execute (the public) attacks below.
+You can [download a VMWare image](https://people.cs.kuleuven.be/~mathy.vanhoef/modwifi/Xubuntu-Modwifi.7z) that has the drivers, firmware, and user-land tools preinstalled. Just boot it, plug-in the USB dongle, and start experimenting! **The password of the account modwifi is modwifi**. Once booted, you can execute (the public) attacks below.
 
 ## Basic Usage
 
