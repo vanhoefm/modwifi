@@ -271,6 +271,7 @@ Below you can find a list papers and systems that either use or build upon ModWi
 
 If you have used or extended ModWifi and would like to have your paper listed here, please open a pull request at https://github.com/vanhoefm/modwifi/pulls or send an email to mathy.vanhoef@kuleuven.be.
 
+* [Mute the Immutable - Making WiFi-to-LoRa CTC Robust Against WiFi Selective Jamming](https://ieeexplore.ieee.org/document/11152892) by Sascha Rösler, Anatolij Zubow, and Falko Dressler. Published in IEEE INFOCOM Workshops, 2025.
 * [A distributed and cooperative signature-based intrusion detection system framework for multi-channel man-in-the-middle attacks against protected Wi-Fi networks](https://link.springer.com/article/10.1007/s10207-024-00899-9) by Manesh Thankappan, Helena Rifà-Pous, and Carles Garrigues. Published in Springer  International Journal of Information Security, 2024.
 * [On the detection of multi-channel man-in-the-middle attacks against Wi-Fi networks](https://www.tdx.cat/handle/10803/691942) by Manesh Thankappan. PhD Thesis, 2024.
 * [Safety-Critical Edge Robotics Architecture with Bounded End-to-End Latency](https://arxiv.org/pdf/2406.14391) by Gautam Gala, Luiz Maia, Isser Kadusale, Mohammad Ibrahim Alkoudsi, Gerhard Fohler, Tilmann Unte, Johannes K ̈uhbacher, and Sebastian Altmeyer. Published at the International Workshop on Real-time Cloud Systems, 2024.
