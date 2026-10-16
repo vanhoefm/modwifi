@@ -271,6 +271,7 @@ Below you can find a list papers and systems that either use or build upon ModWi
 
 If you have used or extended ModWifi and would like to have your paper listed here, please open a pull request at https://github.com/vanhoefm/modwifi/pulls or send an email to mathy.vanhoef@kuleuven.be.
 
+* [Wi-Lo++: Wi-Fi-to-LoRa Cross-Technology Communication With Multipacket Emulation](https://ieeexplore.ieee.org/document/11635905) by Sascha Rösler, Anatolij Zubow, Christos Laskos, and Falko Dressler. Published in IEEE Internet of Things Journal, 2026.
 * [Mute the Immutable - Making WiFi-to-LoRa CTC Robust Against WiFi Selective Jamming](https://ieeexplore.ieee.org/document/11152892) by Sascha Rösler, Anatolij Zubow, and Falko Dressler. Published in IEEE INFOCOM Workshops, 2025.
 * [TTWiFi: Time-Triggered WiFi for Mobile Robotics in Human Environments](https://link.springer.com/chapter/10.1007/978-3-031-58053-6_2) by Carl Lusty, Vladimir Estivill-Castro, and René Hexel. Published in LNICST, 2024.
 * [A distributed and cooperative signature-based intrusion detection system framework for multi-channel man-in-the-middle attacks against protected Wi-Fi networks](https://link.springer.com/article/10.1007/s10207-024-00899-9) by Manesh Thankappan, Helena Rifà-Pous, and Carles Garrigues. Published in Springer  International Journal of Information Security, 2024.
